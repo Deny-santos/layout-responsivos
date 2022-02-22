@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 100px;
+    background-color: rgb(173, 165, 153);
+}
+
+.toUp {
+    height: 60px;
+    width: 60px;
+    font-size: 40px;
+    font-weight: bolder;
+    position: fixed;
+    right: 50px;
+    bottom: 60px;
+    border: none;
+    box-shadow: 1px 5px 13px ;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 1s;
+}
+.toUp:hover {
+    transform: scale(1.1);
+}
+
+p {
+    font-family: 'Playfair Display SC', serif;
+    font-weight: bolder;
+}
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    transition: 0.5s;
+}
+a:hover {
+    background-color: rgb(44, 37, 37);
+    color: aqua;
+}
+
+header {
+    font-size: 23px;
+    display: flex;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* quebra quando 1 bate no outro */
+}
+/* ------------------------------- */
+h1 {
+    font-size: 5em;
+    text-align: center;
+}
+
+img {
+    max-width: 100%; /* segura elas ao maximo de 100% do tam do container delas */ 
+    display: block;
+ }
+ .p1 {
+
+     display: flex;
+     flex-wrap: wrap;
+     max-width: 1000px;
+     margin: 0 auto;
+     padding: 0px 30px 0px 30px;
+}
+
+.p1 > div {
+    flex: 1 1 300px; 
+    margin: 10px; /* sem essa margem o layot ficou quebrado */
+    
+}
+
+div {
+    box-shadow: 1px 5px 13px black;    transition: 1s;
+    background-color: rgb(180, 183, 185);
+
+}
+
+div.divp1:hover {
+    transform: scale(1.1);
+}
+
+/* ---------------- grid layot p2 */
+
+.p2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    max-width: 1000px;
+    padding: 20px;
+    margin: 0 auto;
+
+
+}
+
+.p2 > div:nth-child(n + 4) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px
+}
+
+.p2 > div:nth-child(n + 4) p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p2 > div:nth-child(10){
+    grid-row: 2/5;
+    display: block;
+}
+
+.aparecer {
+    visibility: hidden;
+}
+@media (max-width: 600px) {
+    .p2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .p2 > div:nth-child(n + 4) {
+        display: block;
+    }
+    .p2 > div:nth-child(10){
+        grid-row: 1/2;
+    }
+}
+
+/* ------------- grid 2  */
+
+.p3 > div:nth-child(1) img {
+    width: 100%;
+    background-color: aqua;
+}
+.p3 {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    max-width: 1000px;
+    grid-gap: 10px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@media (max-width: 850px) {
+    .p3 {
+        grid-template-columns: 1fr;
+    }
+    .sidbar {
+        display: flex;
+        overflow: scroll;
+    }
+    .sidbar > div{
+        flex: 1 0 200px; /* 1 pode crescer 2 nao diminue e menor tamanho é 200px */ 
+    }
+}
+
+/* section grid 3 ----------------- */
+
+.p4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    max-width: 1000px;
+    grid-gap: 20px;
+    margin: 0 auto;
+    padding: 0px 20px 0px 20px;
+}
+
+.p4 >div:nth-child(1){
+    grid-row: 1/3;
+}
+
+
+.p4 > div:nth-child(n+2){
+    max-width: 469px;
+}
+
+.p4 > div:nth-child(1) img{
+    margin-bottom: 31px;
+    height: 100%;
+}
+
+.p4 > div {
+    display: grid;
+}
+
+.p4 > div > img {
+    grid-column: 1;
+    grid-row: 1/3;
+
+}
+
+.p4 > div > p {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 15px;
+    grid-column: 1;
+    grid-row: 2/3;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
