@@ -1,3 +1,4 @@
+//animação scroll
 window.sr =  ScrollReveal({reset : true})
 
 sr.reveal(".aparecer", {
@@ -30,4 +31,16 @@ function subir (variavel){
 
 ceta.addEventListener("click", function () {
     document.documentElement.scrollTop = 0
+})
+
+
+//logica do menu bars
+
+const bars = document.querySelector(".bars")
+
+bars.addEventListener("click" ,function () {
+    document.querySelector(".primeiro").classList.toggle("secundario")
+    document.querySelector(".bars").classList.toggle("bars2")
+
+
 })

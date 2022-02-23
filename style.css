@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css");
+
 
 body{
     margin: 0;
@@ -20,6 +22,7 @@ body{
     border-radius: 50px;
     cursor: pointer;
     transition: 1s;
+    z-index: 3;
 }
 .toUp:hover {
     transform: scale(1.1);
@@ -29,10 +32,42 @@ p {
     font-family: 'Playfair Display SC', serif;
     font-weight: bolder;
 }
+
+
+.bars{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    visibility: hidden;
+}
+
+.bars2 {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 180px;
+    top: 10px;
+    visibility: hidden;
+}
+
+.bars > img {
+    width: 35px;
+}
+
+
 ul {
     list-style: none;
     display: flex;
     flex-direction: row;
+    transition: 0.2s;
 }
 
 a {
@@ -40,14 +75,14 @@ a {
     color: white;
     margin: 10px;
     padding: 10px;
-    transition: 0.5s;
+
 }
 a:hover {
     background-color: rgb(44, 37, 37);
     color: aqua;
 }
 
-header {
+.first {
     font-size: 23px;
     display: flex;
     background-color: black;
@@ -56,6 +91,35 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap; /* quebra quando 1 bate no outro */
+}
+
+.secundario {
+    visibility: visible;
+    font-size: 50px;
+    display: flex;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(59, 56, 56);
+    height: 500px;
+    margin-top: 1px;
+
+
+}
+
+
+@media (max-width: 600px) {
+    header ul {
+        visibility: hidden;
+    }
+
+    .bars {
+        visibility: visible;
+    } 
+
 }
 /* ------------------------------- */
 h1 {
@@ -83,7 +147,8 @@ img {
 }
 
 div {
-    box-shadow: 1px 5px 13px black;    transition: 1s;
+    box-shadow: 1px 5px 13px black;    
+    transition: 1s;
     background-color: rgb(180, 183, 185);
 
 }
@@ -163,6 +228,7 @@ div.divp1:hover {
     }
     .sidbar > div{
         flex: 1 0 200px; /* 1 pode crescer 2 nao diminue e menor tamanho é 200px */ 
+        margin: 10px;
     }
 }
 
